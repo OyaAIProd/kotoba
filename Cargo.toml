@@ -1,0 +1,38 @@
+[package]
+name = "kotoha"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89.0"
+description = "Kotoba (言葉) — MCP server framework: shared boilerplate, helpers, and patterns for rmcp"
+homepage = "https://github.com/pleme-io/kotoba"
+repository = "https://github.com/pleme-io/kotoba"
+documentation = "https://docs.rs/kotoha"
+readme = "README.md"
+license = "MIT"
+categories = ["development-tools"]
+keywords = ["mcp", "rmcp", "server", "tools", "claude"]
+
+[lib]
+name = "kotoba"
+
+[lints.clippy]
+pedantic = "warn"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+strip = true
+
+[dependencies]
+rmcp = { version = "0.16", features = ["server", "transport-io"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1"
+schemars = "0.8"
+tracing = "0.1"
+thiserror = "2.0"
+tokio = { version = "1", features = ["sync"] }
+
+[dev-dependencies]
+tempfile = "3"
+tokio = { version = "1", features = ["test-util", "macros"] }
