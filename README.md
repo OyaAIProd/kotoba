@@ -1,5 +1,6 @@
 # Kotoba (言葉)
 
+[![SafeSkill 91/100](https://img.shields.io/badge/SafeSkill-91%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/pleme-io-kotoba)
 MCP server framework for pleme-io applications. Eliminates boilerplate when building MCP servers with rmcp.
 
 ## What It Provides
